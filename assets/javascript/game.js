@@ -28,7 +28,7 @@ function initializeVaribles() {
 
     originalNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         console.log("random number: " + originalNum);
-        $("#randomNumber").html(originalNum);
+        $("#randomNumber").html("Random Number:  " + "<h4>" + originalNum + "</h4");
 
     firstNum = Math.floor(Math.random() * 12) + 1;
         console.log("num1: " + firstNum);
@@ -45,13 +45,13 @@ function matchRandomNumber() {
     if (result === originalNum) {
         wins++;
         $("#wins-losses").text("You win!!");
-        $("#wins").html("<h3>" + "Wins: " +wins + "</h3>");
+        $("#wins").html("<h5>" + "Wins: " + wins + "</h5>");
         initializeVaribles();
     }
     else if (result > originalNum) {
         losses++;
         $("#wins-losses").html("You lose!!");
-        $("#losses").html("<h3>" + "Losses: " + losses + "</h3>");
+        $("#losses").html("<h5>" + "Losses: " + losses + "</h5>");
         initializeVaribles();
     } 
 };
